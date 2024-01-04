@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import alanBtn from '@alan-ai/alan-sdk-web';
 
+const alanKey = 'd89ee825eda1fdd5300df1835b082a602e956eca572e1d8b807a3e2338fdd0dc/stage'
 
 const App = () => {
 
   useEffect(() => {
     alanBtn({
-      key: process.env.alanKey,
+      key: alanKey,
       onCommand: ({ command }) => {
         if(command === 'testCommand'){
           alert('This code was executed');
